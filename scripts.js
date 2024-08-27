@@ -46,4 +46,40 @@ document.addEventListener("DOMContentLoaded",function(){
         contenedorAsignaturas.classList.add("active");
         contenedorEstudiantes.classList.remove("active");
     });
+
+    //Simulacion de CRUD
+    function agregarFila(tabla, id, nombre) {
+        var row = tabla.insertRow();
+        var cellId = row.insertCell(0);
+        var cellNombre = row.insertCell(1);
+        var cellAcciones = row.insertCell(2);
+
+        cellId.textContent = id;
+        cellNombre.textContent = nombre;
+        cellAcciones.innerHTML = '<button class="btn-editar">Editar</button> <button class="btn-eliminar">Eliminar</button>';
+    }
+
+    var tablaEstudiantes = document.querySelector("#contenedorEstudiante table tbody");
+    var btnAgregarEstudiante = document.getElementById("agregarEstudiante");
+    if(btnAgregarEstudiante){
+        btnAgregarEstudiante.addEventListener("click",function(){
+            var id = tablaEstudiantes.row.length + 1;
+            var nombre = prompt("Ingrese el nombre del estudiante:");
+            if(nombre){
+                agregarFila(tablaEstudiantes, id, nombre);
+            }
+        });
+    }
+
+    var tablaAsignatura = document.querySelector("#contenedorAsignatura table tbody");
+    var btnAgregarAsignatura = document.getElementById("agregarAsignatura");
+    if(btnAgregarAsignatura){
+        btnAgregarAsignatura.addEventListener("click",function(){
+            var id = tablaAsignatura.row.length + 1;
+            var nombre = prompt("Ingrese el nombre de la Asignatura:");
+            if(nombre){
+                agregarFila(tablaAsignatura, id, nombre);
+            }
+        });
+    }
 });
