@@ -23,9 +23,12 @@ document.addEventListener("DOMContentLoaded",function(){
             var newPassword = document.getElementById("newPassword").value;
 
             //Aqui va la logica para almacenar al usuario registrado
-            
+
             alert("Usuario regitrado: " + newUser);
             window.location.href = "index.html";
         });
     }
+
+
+    
 });
