@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded",function(){
         cellAcciones.innerHTML = '<button class="btn-editar">Editar</button> <button class="btn-eliminar">Eliminar</button>';
     }
 
-    var tablaEstudiantes = document.querySelector("#contenedorEstudiante table tbody");
+    var tablaEstudiantes = document.querySelector("#contenedorEstudiantes table tbody");
     var btnAgregarEstudiante = document.getElementById("agregarEstudiante");
     if(btnAgregarEstudiante){
         btnAgregarEstudiante.addEventListener("click",function(){
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded",function(){
         });
     }
 
-    var tablaAsignatura = document.querySelector("#contenedorAsignatura table tbody");
+    var tablaAsignatura = document.querySelector("#contenedorAsignaturas table tbody");
     var btnAgregarAsignatura = document.getElementById("agregarAsignatura");
     if(btnAgregarAsignatura){
         btnAgregarAsignatura.addEventListener("click",function(){
