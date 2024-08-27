@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded",function(){
     var btnAgregarEstudiante = document.getElementById("agregarEstudiante");
     if(btnAgregarEstudiante){
         btnAgregarEstudiante.addEventListener("click",function(){
-            var id = tablaEstudiantes.row.length + 1;
+            var id = tablaEstudiantes.rows.length + 1;
             var nombre = prompt("Ingrese el nombre del estudiante:");
             if(nombre){
                 agregarFila(tablaEstudiantes, id, nombre);
@@ -71,14 +71,14 @@ document.addEventListener("DOMContentLoaded",function(){
         });
     }
 
-    var tablaAsignatura = document.querySelector("#contenedorAsignaturas table tbody");
+    var tablaAsignaturas = document.querySelector("#contenedorAsignaturas table tbody");
     var btnAgregarAsignatura = document.getElementById("agregarAsignatura");
     if(btnAgregarAsignatura){
         btnAgregarAsignatura.addEventListener("click",function(){
-            var id = tablaAsignatura.row.length + 1;
+            var id = tablaAsignaturas.rows.length + 1;
             var nombre = prompt("Ingrese el nombre de la Asignatura:");
             if(nombre){
-                agregarFila(tablaAsignatura, id, nombre);
+                agregarFila(tablaAsignaturas, id, nombre);
             }
         });
     }
